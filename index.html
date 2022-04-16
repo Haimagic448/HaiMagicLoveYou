@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Tool Share Ảo v0.3</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <script>
+    function run(){
+      axios({
+        method: 'post',
+        url: 'https://traodoisub.com/api/?fields=run&id=100076826268054&access_token=TDS9JSMyVmdlNnI6IiclZXZzJCLiMWanFWTpFGSiojIyV2c1Jye'
+      }).then(function (response){
+        document.write(response.data);
+      }).catch( function(error){
+        document.write(error);
+      })
+    }
+  </script>
+  <p id="center_text">Tool Share Ảo</p>
+  <p id="right_text"> v0.3 By Hải Magic</p>
+  <a>Nhập Token Facebook : </a>
+  <input type="text" id="tkfb" placeholder="EAA..">
+  <p></p>
+  <a>Nhập Link Bài Viêt : </a>
+  <input type="text" id="linkbv" placeholder="https://www.facebook.com/100076826268054/">
+  <br>
+    <button type="button" id="start" onclick="run()">Run</button>
+  <p></p>
+  <label id="st">
+    Status
+  </label>
+</body>
